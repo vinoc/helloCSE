@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ActeurController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,4 @@ Route::get('/', function () {
     return view('listActeurs');
 });
 
-Route::get('/admin-acteur', function () {
-    return view('adminActeurs');
-});
+Route::get('/admin-acteur', [ActeurController::class, 'accueilAdmin']);
