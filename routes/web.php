@@ -14,8 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('listActeurs');
-});
 
-Route::get('/admin-acteur', [ActeurController::class, 'accueilAdmin']);
+Route::get('/', [ActeurController::class, 'home'])->name('homeActeurs');
+Route::get('/admin-acteur', [ActeurController::class, 'allActeurs'])->name('adminActeurs');
+
+Route::get('/admin-acteur/{id}', [ActeurController::class, 'showOneActeur'])->name('showOneActeur');
+
+Route::get('/add-acteur/', [ActeurController::class, 'addActeur'])->name('addActeur');
+Route::get('/add-acteur/{id}', [ActeurController::class, 'addActeur'])->name('addActeurId');
+Route::post('/add-acteur/{id}', [ActeurController::class, 'addActeur'])->name('addActeurId');
+Route::get('/delete-acteur/{id}', [ActeurController::class, 'deleteActeur'])->name('deleteActeurId');

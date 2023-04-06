@@ -16,6 +16,7 @@ class acteurFactory extends Factory
         return [
             "name" => $this->faker->name(),
             "description" => $this->faker->text($maxNbChars = 400),
+            "picture" => $this->faker->imageUrl($width = 200, $height = 200)
             
         ];
     }
