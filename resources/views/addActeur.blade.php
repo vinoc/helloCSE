@@ -25,7 +25,7 @@
 		</div>
 
 		<button type="submit" class="btn btn-primary">{{ $acteur->id != 0 ? 'Actualiser' : 'Créer' }}</button>
-		<a href="{{ route('allActeurs') }}" class="btn btn-danger">annuler</a>
+		<a href="{{ route('adminActeurs') }}" class="btn btn-danger">annuler</a>
 
 	</form>
 

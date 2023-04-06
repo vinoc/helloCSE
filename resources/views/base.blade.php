@@ -12,7 +12,7 @@
 <body>
 	@yield('content')
 
-	<footer>
+	<footer class="fixed-bottom bg-light">
 		<author id="autor">Test de Kevin DUSAPIN</author>
 	</footer>
 

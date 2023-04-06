@@ -29,5 +29,6 @@
         </div>
 
     </section>
+    <a href="{{ route('adminActeurs') }}">Administrer</a>
 </main>
 @endSection

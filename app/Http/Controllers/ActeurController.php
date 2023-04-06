@@ -48,7 +48,7 @@ class ActeurController extends Controller
 
             $acteur->save();
 
-            return redirect()->route('allActeurs');
+            return redirect()->route('adminActeurs');
         }
 
         //Sinon on affiche le fromulaire.
@@ -62,6 +62,6 @@ class ActeurController extends Controller
 
         $acteur->delete();
 
-        return redirect()->route('allActeurs');
+        return redirect()->route('adminActeurs');
     }
 }
